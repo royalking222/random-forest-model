@@ -1,6 +1,7 @@
 import pandas as pd
 import torch
 import torch.nn as nn
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import recall_score, precision_score, f1_score, roc_auc_score
@@ -52,5 +53,6 @@ print("precision:", precision_score(y_test , y_pred) * 100,"%" )
 print("Recall   :", recall_score(y_test, y_pred)* 100,"%")
 print("F1 Score :", f1_score(y_test, y_pred)* 100,"%")
 print("ROC AUC  :", roc_auc_score(y_test, y_prob)* 100,"%")
+
 
 print("no errors")
